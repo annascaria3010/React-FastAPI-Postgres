@@ -3,7 +3,7 @@ from fastapi import Depends
 from database.config import get_db
 from models.cultivator import CultivatorSchema,UpdateCultivatorSchema
 from fastapi import APIRouter
-from database.response import ResponseModel,ErrorResponseModel
+# from database.response import ResponseModel,ErrorResponseModel
 from database.cultivator import(
     get_cultivator,
     get_cultivators,
@@ -33,7 +33,7 @@ def retrieve_cultivator(id:int,db:Session = Depends(get_db)):
 def retrieve_cultivator_by_farmer_company(id:int,db:Session = Depends(get_db)):
     cultivator = get_cultivator_by_farmer_company_id(db,id)
     if cultivator:
-        return ResponseModel(cultivator_helper(cultivator),"Data retrieved successfully")
+        return cultivator_helper(cultivator),"Data retrieved successfully"
     return "empty list returned"
 
 @router.post("/",response_description="data added to database")

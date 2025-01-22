@@ -16,21 +16,21 @@ class Cultivator(Base):
     updated_by = Column(String, nullable = False)
 
 class CultivatorSchema(BaseModel):
-    company_id = int
-    name = str
-    active = bool
-    created_at = DateTime
-    updated_at = DateTime
-    created_by = String
-    updated_by = String 
+    company_id : int
+    name : str
+    active : bool
+    created_at : datetime
+    updated_at : datetime
+    created_by : str
+    updated_by : str
     
 class Config:
     from_attributes = True
 
 class UpdateCultivatorSchema(BaseModel):
-    company_id = Optional[int]
-    name = Optional[str]
-    active = Optional[bool]
+    company_id :Optional[int]
+    name :Optional[str]
+    active :Optional[bool]
     created_at : Optional[datetime]
     created_by: Optional[str]
     updated_at: Optional[datetime]
