@@ -2,4 +2,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #000000;
+    
+}
+
+.small-title{
+    display: flex;
+    
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 24px;
+}
+
+.info{
+    display: flex;
+    gap: 0.5 rem;
+}
+
+.icons{
+    display: flex;
+    gap: 1rem;
+    
+    font-size: 24px;
 }
