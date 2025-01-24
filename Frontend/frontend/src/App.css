@@ -4,7 +4,7 @@ body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
-
+  
 }
 
 body::before {
@@ -18,7 +18,7 @@ body::before {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5; /* Adjust the opacity here (0 = fully transparent, 1 = fully opaque) */
+  opacity: 0.2; /* Adjust the opacity here (0 = fully transparent, 1 = fully opaque) */
   z-index: -1; /* Place it behind the content */
 }
 /* General styling */
@@ -76,7 +76,7 @@ body::before {
   
   /* Table styling */
   .data-table {
-    width: 100%;
+    width: 50%;
     margin: 0 auto;
     border-collapse: collapse;
     text-align: left;
@@ -89,7 +89,7 @@ body::before {
   }
   
   .data-table th {
-    background-color: #f4f4f4;
+    background-color: #ffcece;
     font-weight: bold;
   }
   

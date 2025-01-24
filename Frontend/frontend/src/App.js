@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar/navbar';
-import './App.css'; // Import the CSS file
+import './App.css';
 
 const App = () => {
   const [companies, setCompanies] = useState([]); // Array to store companies with cultivators
@@ -13,18 +13,24 @@ const App = () => {
       return;
     }
 
+    // Check if the cultivator already exists in any company
+    const isCultivatorExists = companies.some((company) =>
+      company.cultivators.includes(currentCultivator)
+    );
+
+    if (isCultivatorExists) {
+      alert(`The cultivator "${currentCultivator}" is already assigned to another company!`);
+      return;
+    }
+
     const existingCompany = companies.find(
       (company) => company.name === currentCompany
     );
 
     if (existingCompany) {
       // Add cultivator to the existing company
-      if (!existingCompany.cultivators.includes(currentCultivator)) {
-        existingCompany.cultivators.push(currentCultivator);
-        setCompanies([...companies]);
-      } else {
-        alert('This cultivator is already associated with the company!');
-      }
+      existingCompany.cultivators.push(currentCultivator);
+      setCompanies([...companies]);
     } else {
       // Add new company with the cultivator
       setCompanies([
@@ -32,7 +38,6 @@ const App = () => {
         { name: currentCompany, cultivators: [currentCultivator] },
       ]);
     }
-
     // Clear input fields
     setCurrentCompany('');
     setCurrentCultivator('');
