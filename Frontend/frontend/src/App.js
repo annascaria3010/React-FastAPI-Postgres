@@ -3,11 +3,10 @@ import Navbar from './Navbar/navbar';
 import './App.css';
 
 const App = () => {
-  const [companies, setCompanies] = useState([{}]); // Array to store companies with cultivators
-  const [currentCompany, setCurrentCompany] = useState(''); // Selected or new company
-  const [currentCultivator, setCurrentCultivator] = useState(''); // Current cultivator input value
-  const [newCompany, setNewCompany] = useState(''); // New company input value
-  
+  const [companies, setCompanies] = useState([{}]); 
+  const [option,setOption] = useState('')
+  const [currentCompany, setCurrentCompany] = useState('');
+
   async function retriveFarmers(){
     const  response = await fetch("http://127.0.0.1:8000/farmer/")
     const data = await response.json()
@@ -25,38 +24,47 @@ const App = () => {
       <div className="form-container">
         <select
           value={currentCompany}
-          // onChange={(e) => setCurrentCompany(e.target.value)}
+          onChange={(e) => setCurrentCompany(e.target.value)}
           className="dropdown"
         >
           <option value="">Select Company</option>
           {companies.map((company, index) => (
+            
             <option key={index} value={company}>
               {company.name}
+              
             </option>
           ))}
         </select>
         
       </div>
 
-      {/* Display companies and cultivators */}
-      {/* {companies.length > 0 && (
-        <table className="data-table">
-          <thead>
-            <tr>
-              <th>Company</th>
-              <th>Cultivators</th>
-            </tr>
-          </thead>
-          <tbody>
-            {companies.map((company, index) => (
-              <tr key={index}>
-                <td>{company.name}</td>
-                <td>{company.cultivators.join(', ')}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )} */}
+      <table className='table'>
+      <tr>
+          <th>
+            id
+          </th>
+          <th>
+            Name
+          </th>
+          <th>
+            Active
+          </th>     
+      </tr>
+        
+      <tr>
+        <td>
+          12
+        </td>
+        <td>
+          A
+        </td>
+        <td>
+          yes
+        </td>
+      </tr>
+
+      </table>
     </div>
   );
 };
