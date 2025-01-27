@@ -4,70 +4,78 @@ import './App.css';
 
 const App = () => {
   const [companies, setCompanies] = useState([]); // Array to store companies with cultivators
-  const [currentCompany, setCurrentCompany] = useState(''); // Current company input value
+  const [currentCompany, setCurrentCompany] = useState(''); // Selected or new company
   const [currentCultivator, setCurrentCultivator] = useState(''); // Current cultivator input value
+  const [newCompany, setNewCompany] = useState(''); // New company input value
 
-  const handleAdd = () => {
-    if (!currentCompany || !currentCultivator) {
-      alert('Please fill in both fields!');
-      return;
-    }
+  // const handleAddCompany = () => {
+  //   if (!newCompany) {
+  //     alert('Please enter a company name!');
+  //     return;
+  //   }
 
-    // Check if the cultivator already exists in any company
-    const isCultivatorExists = companies.some((company) =>
-      company.cultivators.includes(currentCultivator)
-    );
+  //   // Check if the company already exists
+  //   const existingCompany = companies.find(
+  //     (company) => company.name === newCompany
+  //   );
 
-    if (isCultivatorExists) {
-      alert(`The cultivator "${currentCultivator}" is already assigned to another company!`);
-      return;
-    }
+  //   if (existingCompany) {
+  //     alert(`The company "${newCompany}" already exists!`);
+  //   } else {
+  //     setCompanies([...companies, { name: newCompany, cultivators: [] }]);
+  //   }
 
-    const existingCompany = companies.find(
-      (company) => company.name === currentCompany
-    );
+  //   setNewCompany(''); // Clear input
+  // };
 
-    if (existingCompany) {
-      // Add cultivator to the existing company
-      existingCompany.cultivators.push(currentCultivator);
-      setCompanies([...companies]);
-    } else {
-      // Add new company with the cultivator
-      setCompanies([
-        ...companies,
-        { name: currentCompany, cultivators: [currentCultivator] },
-      ]);
-    }
-    // Clear input fields
-    setCurrentCompany('');
-    setCurrentCultivator('');
-  };
+  // const handleAddCultivator = () => {
+  //   if (!currentCompany || !currentCultivator) {
+  //     alert('Please select a company and enter a cultivator name!');
+  //     return;
+  //   }
+
+  //   // Check if the cultivator already exists
+  //   const isCultivatorExists = companies.some((company) =>
+  //     company.cultivators.includes(currentCultivator)
+  //   );
+
+  //   if (isCultivatorExists) {
+  //     alert(`The cultivator "${currentCultivator}" is already assigned to another company!`);
+  //     return;
+  //   }
+
+  //   // Add cultivator to the selected company
+  //   const updatedCompanies = companies.map((company) =>
+  //     company.name === currentCompany
+  //       ? { ...company, cultivators: [...company.cultivators, currentCultivator] }
+  //       : company
+  //   );
+
+  //   setCompanies(updatedCompanies);
+  //   setCurrentCultivator(''); // Clear input
+  // };
 
   return (
     <div className="app-container">
       <Navbar />
       <h1 className="title">Add Cultivator and Company</h1>
-
       <div className="form-container">
-        <input
-          type="text"
-          placeholder="Add Company"
+        <select
           value={currentCompany}
-          onChange={(e) => setCurrentCompany(e.target.value)}
-          className="input-field"
-        />
-        <input
-          type="text"
-          placeholder="Add Cultivator"
-          value={currentCultivator}
-          onChange={(e) => setCurrentCultivator(e.target.value)}
-          className="input-field"
-        />
-        <button onClick={handleAdd} className="add-button">
-          Add
-        </button>
+          // onChange={(e) => setCurrentCompany(e.target.value)}
+          className="dropdown"
+        >
+          <option value="">Select Company</option>
+          {companies.map((company, index) => (
+            <option key={index} value={company.name}>
+              {company.name}
+            </option>
+          ))}
+        </select>
+        
       </div>
 
+      {/* Display companies and cultivators */}
       {companies.length > 0 && (
         <table className="data-table">
           <thead>

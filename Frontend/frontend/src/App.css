@@ -7,20 +7,20 @@ body {
   
 }
 
-body::before {
+/* body::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/public/images/Group 101.png'); /* Use the correct path */
+  background-image: url('/public/images/Group 101.png'); 
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.2; /* Adjust the opacity here (0 = fully transparent, 1 = fully opaque) */
-  z-index: -1; /* Place it behind the content */
-}
+  opacity: 0.2; 
+  z-index: -1; 
+} 
 /* General styling */
 .app-container {
     font-family: Arial, sans-serif;
