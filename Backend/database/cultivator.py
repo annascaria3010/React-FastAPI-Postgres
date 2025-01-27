@@ -19,7 +19,7 @@ def get_cultivators(db:Session)->Cultivator:
 def get_cultivator(db:Session,id:int)->Cultivator:
     return db.query(Cultivator).filter(Cultivator.id == id).first()
 def get_cultivator_by_farmer_company_id(db:Session,comp_id:int)->Cultivator:
-     return db.query(Cultivator).filter(Cultivator.company_id == comp_id).first()
+     return db.query(Cultivator).filter(Cultivator.company_id == comp_id).all()
 
 def add_cultivator(db:Session,data:dict)->Cultivator:
         new_cultivator = Cultivator(**data)

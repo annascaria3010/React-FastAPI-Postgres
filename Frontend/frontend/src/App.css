@@ -100,4 +100,6 @@ body {
   .data-table tr:nth-child(even) td {
     background-color: #f9f9f9;
   }
-  
+  .dropdown{
+    color: black;
+  }
