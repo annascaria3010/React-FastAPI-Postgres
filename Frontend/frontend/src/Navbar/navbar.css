@@ -3,13 +3,13 @@
     justify-content: space-between;
     align-items: center;
     color: #ffffff;
-    margin-inline: 5rem;
-    
+    /* margin-inline: 5rem; */
+    padding: 20px;
+    border-bottom: 2px solid ;
 }
 
 .small-title{
     display: flex;
-    
     align-items: center;
     gap: 0.5rem;
     font-size: 24px;

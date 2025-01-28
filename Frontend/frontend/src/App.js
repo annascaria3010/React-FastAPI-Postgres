@@ -30,7 +30,7 @@ const App = () => {
           <option value="">Select Company</option>
           {companies.map((company, index) => (
             
-            <option key={index} value={company}>
+            <option key={index} value={company.name}>
               {company.name}
               
             </option>

@@ -7,7 +7,13 @@ import { FaSearch } from 'react-icons/fa'; // FaSearch is the search icon from F
 import { FiMenu } from "react-icons/fi";
 import { FiUser } from "react-icons/fi";
 
+
 const navbar = () => {
+  
+  const handleMenu = () => {
+    openModel()
+  }
+
   return (
     <div className='nav-main'>
       <h3 className='small-title'>
@@ -26,7 +32,7 @@ const navbar = () => {
         <FaSearch />
         <FaHome />
         <FiUser />
-        <FiMenu />
+        <FiMenu onClick={handleMenu}/>
       </div>
     </div>
   )
