@@ -41,27 +41,15 @@ const App = () => {
 
       <table className='table'>
       <tr>
-          <th>
-            id
-          </th>
-          <th>
-            Name
-          </th>
-          <th>
-            Active
-          </th>     
+          <th>ID</th>
+          <th>Name</th>
+          <th>Active</th>     
       </tr>
         
       <tr>
-        <td>
-          12
-        </td>
-        <td>
-          A
-        </td>
-        <td>
-          yes
-        </td>
+        <td>12</td>
+        <td>A</td>
+        <td>yes</td>
       </tr>
 
       </table>

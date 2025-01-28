@@ -23,6 +23,25 @@
 .icons{
     display: flex;
     gap: 1rem;
-    
     font-size: 24px;
 }
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    border: 1px solid ;
+    padding-inline: 1rem;
+    border-radius: 10px;
+  }
+  
+  .search-icon {
+    font-size: 1.3rem; /* Adjust the size of the icon */
+    color: #ffffff; /* Icon color */
+  }
+  
+  .text {
+    font-size: 1rem; /* Adjust the size of the text */
+    color: #ffffff; /* Text color */
+  }
+  
