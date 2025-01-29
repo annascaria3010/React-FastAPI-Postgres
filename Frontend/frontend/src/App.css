@@ -1,6 +1,6 @@
 body {
   position: relative;
-  background-color: rgb(170, 129, 129);
+  background-color: rgb(230, 214, 214);
   height: 100vh;
   margin: 0;
   overflow: hidden;
@@ -45,34 +45,7 @@ body {
     margin-bottom: 20px;
   }
   
-  /* Input fields */
-  .input-field {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 200px;
-  }
-  
-  .input-field:focus {
-    outline: none;
-    border-color: #007bff;
-  }
-  
-  /* Add button */
-  .add-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .add-button:hover {
-    background-color: #0056b3;
-  }
+ 
   
   /* Table styling */
   .table {
@@ -89,16 +62,13 @@ body {
   }
   
   .table th {
-    background-color: #ffcece;
+    background-color: #09296e;
     font-weight: bold;
+    color: #ffffff;
   }
   
   .table td {
     background-color: #fff;
-  }
-  
-  .data-table tr:nth-child(even) td {
-    background-color: #f9f9f9;
   }
   .dropdown{
     color: black;
