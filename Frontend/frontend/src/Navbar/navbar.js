@@ -49,7 +49,7 @@ const Navbar = () => {
           <h4>Language</h4>
           <ul className="language-options">
             <li onClick={() => handleLanguageSelect('English')}>English</li>
-            <li onClick={() => handleLanguageSelect('Japanese')}>Spanish</li>
+            <li onClick={() => handleLanguageSelect('Japanese')}>Japanese</li>
             
           </ul>
         </div>

@@ -24,19 +24,17 @@ body {
 /* General styling */
 .app-container {
     font-family: Arial, sans-serif;
-    /* padding: 20px; */
   }
-  
-  /* Title styling */
+
   .title {
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 40px;
     font-size: 24px;
     font-weight: bold;
     color: #ffffff;
   }
   
-  /* Form container */
   .form-container {
     display: flex;
     justify-content: center;
@@ -45,6 +43,23 @@ body {
     margin-bottom: 20px;
   }
   
+  .dropdown{
+    color: black;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .search-btn{
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background-color: #09296e;
+    color: #fff;
+  }
+
+  .search-btn:hover{
+    background-color: #00a2ff;
+  }
  
   
   /* Table styling */
@@ -70,6 +85,4 @@ body {
   .table td {
     background-color: #fff;
   }
-  .dropdown{
-    color: black;
-  }
+  

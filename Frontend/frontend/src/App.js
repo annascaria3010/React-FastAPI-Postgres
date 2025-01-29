@@ -33,7 +33,7 @@ const App = () => {
   return (
     <div className="app-container">
       <Navbar />
-      <h1 className="title">Add Cultivator and Company</h1>
+      <h1 className="title">Cultivator & Company Details</h1>
       <div className="form-container">
         <select
           name={currentCompany}
@@ -53,7 +53,7 @@ const App = () => {
           ))}
         </select>
         
-        <button onClick={handleId}>
+        <button className='search-btn' onClick={handleId}>
           search
         </button>
       </div>
