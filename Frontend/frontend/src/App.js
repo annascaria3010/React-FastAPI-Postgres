@@ -4,18 +4,31 @@ import './App.css';
 
 const App = () => {
   const [companies, setCompanies] = useState([{}]); 
-  const [option,setOption] = useState('')
+
   const [currentCompany, setCurrentCompany] = useState('');
+  const [tableData,setTableData] = useState([]);
+  const [id,setId] = useState(null);
 
   async function retriveFarmers(){
     const  response = await fetch("http://127.0.0.1:8000/farmer/")
     const data = await response.json()
     setCompanies(data)
-    console.log (data)
+    console.log (tableData)
   } 
+
+  async function handleId(){
+    const  response = await fetch(`http://127.0.0.1:8000/cultivator/farmer-company-cultivators/${id}?id=${id}`)
+    const data = await response.json()
+    console.log ('fromhandle id funct',data[0])
+    setTableData(data[0])
+    // console.log (tableData)
+  } 
+
   useEffect(() => {
     retriveFarmers()
   },[])
+
+  
 
   return (
     <div className="app-container">
@@ -23,23 +36,29 @@ const App = () => {
       <h1 className="title">Add Cultivator and Company</h1>
       <div className="form-container">
         <select
-          value={currentCompany}
-          onChange={(e) => setCurrentCompany(e.target.value)}
+          name={currentCompany}
+          value = {id}
+          onChange={(e) => {setCurrentCompany(e.target.name)
+          setId(e.target.value)
+          }}
           className="dropdown"
         >
           <option value="">Select Company</option>
           {companies.map((company, index) => (
             
-            <option key={index} value={company.name}>
+            <option key={index} value={company.id}>
               {company.name}
               
             </option>
           ))}
         </select>
         
+        <button onClick={handleId}>
+          search
+        </button>
       </div>
 
-      <table className='table'>
+{(tableData.length)>0 &&       <table className='table'>
       <tr>
           <th>ID</th>
           <th>Name</th>
@@ -47,12 +66,26 @@ const App = () => {
       </tr>
         
       <tr>
-        <td>12</td>
+        {/* <td>12</td>
         <td>A</td>
-        <td>yes</td>
+        <td>yes</td> */}
+         
       </tr>
 
-      </table>
+        {tableData.map((data)=>{
+          console.log(data)
+          return(
+          <tr key={data.id}>
+          <td>{data.id}</td>
+          <td>{data.name}</td>
+          <td>{data.active ? 'Yes' : 'No' }</td>
+          </tr>
+          )
+            
+        })}
+        
+
+      </table>}
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './navbar.css';
 import { GiMushroomGills } from 'react-icons/gi';
 import { FaHome, FaSearch } from 'react-icons/fa';
-import { IoMdCall } from 'react-icons/io';
+import { MdLanguage } from "react-icons/md";
 import { FiMenu, FiUser } from 'react-icons/fi';
 
 const Navbar = () => {
@@ -24,29 +24,29 @@ const Navbar = () => {
         <span>Mush.</span>
       </h3>
       <div className="icons">
+      
       <div className="search">
         <FaSearch className="search-icon" />
         <span className="text">Search</span>
       </div>
 
+      
+
         <div className='nav-btn'>
-        <FaHome /> 
-       <span className="text"> Home</span>
+        <FiUser className='user'/> 
+        {/* <span className="nav-text"> User</span> */}
         </div>
 
         <div className='nav-btn'>
-        <FiUser /> 
-        <span className="text"> User</span>
-        </div>
-        
-        <FiMenu className='nav-btn'
+        <MdLanguage  className='lang'
           onClick={handleMenu} />
-          <span className="text"> Menu</span>
+          {/* <span className="nav-text"> Menu</span> */}
+        </div>
       </div>
 
       {isModalOpen && (
         <div className="modal">
-          <h4>Select Language</h4>
+          <h4>Language</h4>
           <ul className="language-options">
             <li onClick={() => handleLanguageSelect('English')}>English</li>
             <li onClick={() => handleLanguageSelect('Spanish')}>Spanish</li>

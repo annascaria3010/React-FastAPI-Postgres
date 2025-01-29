@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     color: #ffffff;
-    /* margin-inline: 5rem; */
+  background-color: #4d4848;
     padding: 20px;
     border-bottom: 2px solid ;
 }
@@ -22,8 +22,9 @@
 
 .icons{
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
     font-size: 24px;
+    align-items: center;
 }
 
 .search {
@@ -31,17 +32,75 @@
     align-items: center;
     gap: 4rem;
     border: 1px solid ;
-    padding-inline: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 10px;
   }
   
   .search-icon {
-    font-size: 1.3rem; /* Adjust the size of the icon */
-    color: #ffffff; /* Icon color */
+    font-size: 1.3rem;
+    color: #ffffff; 
   }
   
   .text {
-    font-size: 1rem; /* Adjust the size of the text */
-    color: #ffffff; /* Text color */
+    font-size: 1rem; 
+    color: #ffffff; 
+  }
+
+  .nav-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* .nav-text{
+    font-size: 0.8rem; 
+  } */
+
+  .user{
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 50%;
+    padding: 1px;
+  }
+
+  .lang{
+    font-size: 1.8rem;
+  }
+
+  .modal {
+    position: absolute;
+    top: 75px; 
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    width: 100px;
+    z-index: 1000;
+  }
+  
+  .modal h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .language-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .language-options li {
+    padding: 0.5rem 0;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s;
+  }
+  
+  .language-options li:hover {
+    background-color: #f0f0f0;
   }
   
