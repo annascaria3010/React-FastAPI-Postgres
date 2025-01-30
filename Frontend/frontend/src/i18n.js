@@ -5,52 +5,21 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
+
         navbar: {
-          home: "Home",
-          flashCards: "Flash Cards",
-          quiz: "Quiz",
-          settings: "Settings"
+          mush: ".Mush",
+          
         },
-        header: {
-          title: "Let's Go!",
-          subtitle: "KANJI"
-        },
-        app:{
-          heading: "JLPT Kanji list"
-        },
-        flashCards:{
-          heading: "Flash Card",
-          button: "Next",
-          reset: "Reset"
-        },
-        quiz:{
-          heading: "Quiz"
-        }
+        
       }
     },
     ja: {
       translation: {
         navbar: {
-          home: "ホーム",
-          flashCards: "フラッシュカード",
-          quiz: "クイズ",
-          settings: "設定"
+          mush: ".マッシュ",
+          
         },
-        header: {
-          title: "行こう！",
-          subtitle: "漢字"
-        },
-        app:{
-          heading: "JLPT漢字リスト"
-        },
-        flashCards:{
-          heading: "フラッシュカード",
-          button: "つぎ",
-          reset: "リセット"
-        },
-        quiz:{
-          heading: "クイズ"
-        }
+        
       }
     }
   },

@@ -4,24 +4,28 @@ import { GiMushroomGills } from 'react-icons/gi';
 import { FaHome, FaSearch } from 'react-icons/fa';
 import { MdLanguage } from "react-icons/md";
 import { FiMenu, FiUser } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
+
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { i18n, t } = useTranslation();
+  
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+  
 
   const handleMenu = () => {
     setIsModalOpen((prev) => !prev); // Toggle modal visibility
   };
 
-  const handleLanguageSelect = (language) => {
-    alert(`Selected language: ${language}`);
-    setIsModalOpen(false); // Close modal after selection
-  };
 
   return (
     <div className="nav-main">
       <h3 className="small-title">
         <GiMushroomGills />
-        <span>Mush.</span>
+        <span>{t('navbar.mush')}</span>
       </h3>
       <div className="icons">
       
@@ -47,11 +51,12 @@ const Navbar = () => {
       {isModalOpen && (
         <div className="modal">
           <h4>Language</h4>
-          <ul className="language-options">
-            <li onClick={() => handleLanguageSelect('English')}>English</li>
-            <li onClick={() => handleLanguageSelect('Japanese')}>Japanese</li>
-            
-          </ul>
+         
+          <div className="language-options">
+          <button onClick={() => changeLanguage('en')}>English</button>
+          <button onClick={() => changeLanguage('ja')}>日本語</button>
+          </div>
+         
         </div>
       )}
     </div>
