@@ -11,7 +11,7 @@ i18n.use(initReactI18next).init({
           
         },
         
-      }
+      },
     },
     ja: {
       translation: {
@@ -20,8 +20,8 @@ i18n.use(initReactI18next).init({
           
         },
         
-      }
-    }
+      },
+    },
   },
   lng: "en", // Default language
   fallbackLng: "en", // Fallback language if translation is missing
