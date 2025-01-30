@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar/navbar';
 import './App.css';
+import i18n from './i18n';
+import { I18nextProvider } from 'react-i18next';
 
 const App = () => {
   const [companies, setCompanies] = useState([{}]); 
@@ -19,7 +21,7 @@ const App = () => {
   async function handleId(){
     const  response = await fetch(`http://127.0.0.1:8000/cultivator/farmer-company-cultivators/${id}?id=${id}`)
     const data = await response.json()
-    console.log ('fromhandle id funct',data[0])
+    console.log ('from handle id funct',data[0])
     setTableData(data[0])
     // console.log (tableData)
   } 
@@ -32,7 +34,9 @@ const App = () => {
 
   return (
     <div className="app-container">
+     
       <Navbar />
+     
       <h1 className="title">Cultivator & Company Details</h1>
       <div className="form-container">
         <select
