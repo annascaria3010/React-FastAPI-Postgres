@@ -8,7 +8,11 @@ i18n.use(initReactI18next).init({
 
         navbar: {
           mush: ".Mush",
-          
+          search: "Search"
+        },
+
+        App:{
+          title:"Cultivator & Company Details",
         },
         
       },
@@ -17,7 +21,10 @@ i18n.use(initReactI18next).init({
       translation: {
         navbar: {
           mush: ".マッシュ",
-          
+          search: "探す"
+        },
+        App:{
+          title:"さいばいしゃ と かいしゃ の しょうさい",
         },
         
       },

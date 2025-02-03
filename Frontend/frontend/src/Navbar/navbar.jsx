@@ -13,11 +13,13 @@ const Navbar = () => {
   
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
+    setIsModalOpen(false)
   };
   
 
   const handleMenu = () => {
     setIsModalOpen((prev) => !prev); // Toggle modal visibility
+    
   };
 
 
@@ -31,7 +33,7 @@ const Navbar = () => {
       
       <div className="search">
         <FaSearch className="search-icon" />
-        <span className="text">Search</span>
+        <span className="text">{t('navbar.search')}</span>
       </div>
 
       

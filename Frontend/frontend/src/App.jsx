@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useTransition } from 'react';
 import Navbar from './Navbar/navbar';
 import './App.css';
 import i18n from './i18n';
 import { I18nextProvider } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const App = () => {
+  const { t } = useTranslation()
   const [companies, setCompanies] = useState([{}]); 
-
   const [currentCompany, setCurrentCompany] = useState('');
   const [tableData,setTableData] = useState([]);
   const [id,setId] = useState(null);
@@ -36,8 +37,8 @@ const App = () => {
     <div className="app-container">
      
       <Navbar />
-     
-      <h1 className="title">Cultivator & Company Details</h1>
+      <img src="/images/mush.jpg"  />
+      <h1 className="title">{t('App.title')}</h1>
       <div className="form-container">
         <select
           name={currentCompany}
