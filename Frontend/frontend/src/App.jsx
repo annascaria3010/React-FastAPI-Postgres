@@ -37,7 +37,7 @@ const App = () => {
     <div className="app-container">
      
       <Navbar />
-      <img src="/images/mush.jpg" className="mush-image" />
+      
       <h1 className="title">{t('App.title')}</h1>
       <div className="form-container">
         <select

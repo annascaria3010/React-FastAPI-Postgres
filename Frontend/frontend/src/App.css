@@ -24,6 +24,7 @@ body {
 /* General styling */
 .app-container {
     font-family: Arial, sans-serif;
+    background-image: url('/public/images/mush.jpg') ;
   }
 
   .mush-image {
