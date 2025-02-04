@@ -26,13 +26,21 @@ body {
     font-family: Arial, sans-serif;
   }
 
+  .mush-image {
+    
+    height: 45vh; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    display: block; /* Ensure it's properly aligned */
+  }
+  
+
   .title {
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 40px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 900;
+    color: #884200;
   }
   
   .form-container {
