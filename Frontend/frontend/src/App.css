@@ -27,10 +27,11 @@ body {
   }
 
   .mush-image {
-    
-    height: 45vh; /* Maintain aspect ratio */
+    width: 100vw;
+    height: auto; /* Maintain aspect ratio */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
     display: block; /* Ensure it's properly aligned */
+    opacity: 0.7;
   }
   
 
