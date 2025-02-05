@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-body {@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+body {
   position: relative;
   background-color: rgb(230, 214, 214);
   height: 100vh;
@@ -26,12 +27,14 @@ body {@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ita
 /* General styling */
 .app-container {
     font-family: "Playfair Display", serif;
-    background-image: url('/public/images/mush.jpg') ;
-    width: 100vw;
-    height: 100vh; 
-    opacity: 0.7;
+    background: url('/public/images/mush.jpg') ;
+    width: 100%;
+    height: 100%; 
+    opacity: 0.8;
+    background-repeat: no-repeat;
     
   }
+
 
   /* .mush-image {
     width: 100vw;
@@ -45,10 +48,16 @@ body {@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ita
   .title {
     text-align: center;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 0px;
+    padding-top: 20px;
     font-size: 42px;
-    font-weight: 900;
-    color: #ffffff;
+    font-weight: 800;
+    color: #250c0c;
+    background-color: #ffffff;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
   }
   
