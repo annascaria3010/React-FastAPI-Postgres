@@ -1,9 +1,11 @@
-body {
+
+body {@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
   position: relative;
   background-color: rgb(230, 214, 214);
   height: 100vh;
   margin: 0;
   overflow: hidden;
+  
   
 }
 
@@ -23,26 +25,31 @@ body {
 } 
 /* General styling */
 .app-container {
-    font-family: Arial, sans-serif;
+    font-family: "Playfair Display", serif;
     background-image: url('/public/images/mush.jpg') ;
+    width: 100vw;
+    height: 100vh; 
+    opacity: 0.7;
+    
   }
 
-  .mush-image {
+  /* .mush-image {
     width: 100vw;
-    height: auto; /* Maintain aspect ratio */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
-    display: block; /* Ensure it's properly aligned */
+    height: 100vh; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    display: block; 
     opacity: 0.7;
   }
-  
+   */
 
   .title {
     text-align: center;
     margin-bottom: 20px;
     margin-top: 20px;
-    font-size: 32px;
+    font-size: 42px;
     font-weight: 900;
-    color: #884200;
+    color: #ffffff;
+    
   }
   
   .form-container {

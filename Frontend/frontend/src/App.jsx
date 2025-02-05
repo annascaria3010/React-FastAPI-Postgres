@@ -34,7 +34,9 @@ const App = () => {
   
 
   return (
-    <div className="app-container">
+    <div className="app-container"
+    >
+    
      
       <Navbar />
       
