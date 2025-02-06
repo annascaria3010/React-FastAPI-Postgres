@@ -5,6 +5,7 @@ import './App.css';
 import i18n from './i18n';
 import { I18nextProvider } from 'react-i18next';
 import { useTranslation } from 'react-i18next';
+import Dropdown from './components/Dropdown/dropdown';
 
 const App = () => {
   const { t } = useTranslation()
@@ -41,7 +42,7 @@ const App = () => {
       <div className="app-container">
       <h1 className="title">{t('App.title')}</h1>
       <div className="form-container">
-        <select
+        {/* <select
           name={currentCompany}
           value = {id}
           onChange={(e) => {setCurrentCompany(e.target.name)
@@ -57,14 +58,16 @@ const App = () => {
               
             </option>
           ))}
-        </select>
+        </select> */}
         
+      <Dropdown Companies={companies} CurrentCompany={currentCompany} SetCurrentCompany={setCurrentCompany} Id={id} SetId={setId}/>
+
         <button className='search-btn' onClick={handleId}>
           search
         </button>
       </div>
 
-{(tableData.length)>0 &&       <table className='table'>
+{(tableData.length)>0 && <table className='table'>
       <tr>
           <th>ID</th>
           <th>Name</th>
