@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useTransition } from 'react';
-import Navbar from './Navbar/navbar';
-import Sidebar from './bottombar/bottombar';
+import Navbar from './components/Navbar/navbar';
+import Sidebar from './components/bottombar/bottombar';
 import './App.css';
 import i18n from './i18n';
 import { I18nextProvider } from 'react-i18next';
