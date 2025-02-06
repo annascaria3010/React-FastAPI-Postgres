@@ -28,8 +28,8 @@ body {
 .app-container {
     font-family: "Playfair Display", serif;
     background: url('/public/images/mush.jpg') ;
-    width: 100%;
-    height: 100%; 
+    width: 100vw;
+    height: 100vh; 
     opacity: 0.8;
     background-repeat: no-repeat;
     
