@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import { GiMushroomGills } from 'react-icons/gi';
-import { FaHome, FaSearch } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 import { MdLanguage } from "react-icons/md";
-import { FiMenu, FiUser } from 'react-icons/fi';
+import { FiUser } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 
 
