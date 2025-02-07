@@ -26,12 +26,15 @@ body {
 } 
 /* General styling */
 .app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
     font-family: "Playfair Display", serif;
     background: url('/public/images/mush.jpg') ;
     width: 100vw;
     height: 100vh; 
     opacity: 0.8;
-    background-repeat: no-repeat;
+    background-size: cover;
     
   }
 
@@ -49,14 +52,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    margin-top: 0px;
-    padding-top: 20px;
+    margin: 40px;
+    padding-inline: 10px;
     font-size: 42px;
     font-weight: 800;
     color: #250c0c;
     background-color: #ffffff;
-    max-width: 600px;
+    border: 5px solid #884200;
+    border-radius: 20px;
+    max-width: 100%;
   }
   
   .form-container {
