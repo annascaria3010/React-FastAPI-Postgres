@@ -36,17 +36,13 @@ const Navbar = () => {
         <span className="text">{t('navbar.search')}</span>
       </div>
 
-      
-
         <div className='nav-btn'>
         <FiUser className='user'/> 
-        {/* <span className="nav-text"> User</span> */}
         </div>
 
         <div className='nav-btn'>
         <MdLanguage  className='lang'
           onClick={handleMenu} />
-          {/* <span className="nav-text"> Menu</span> */}
         </div>
       </div>
 
