@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Dropdown = ({Companies, CurrentCompany,SetCurrentCompany,Id, SetId}) => {
+  console.log (Companies)
   return (
     <div>
     <select

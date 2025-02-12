@@ -32,7 +32,6 @@ const App = () => {
     retriveFarmers()
   },[])
 
-  
 
   return (
     <div>
