@@ -29,12 +29,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-    font-family: "Playfair Display", serif;
-    background: url('/public/images/mush.jpg') ;
-    width: 100vw;
-    height: 100vh; 
-    opacity: 0.8;
-    background-size: cover;
+  font-family: "Playfair Display", serif;
+  background: url('/public/images/mush.jpg') ;
+  width: 100vw;
+  height: 100vh; 
+  opacity: 0.8;
+  background-size: cover;
     
   }
 
@@ -49,9 +49,6 @@ body {
    */
 
   .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 40px;
     padding-inline: 10px;
     font-size: 42px;
@@ -60,7 +57,7 @@ body {
     background-color: #ffffff;
     border: 5px solid #884200;
     border-radius: 20px;
-    max-width: 100%;
+   
   }
   
   .form-container {
